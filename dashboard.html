@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +32,7 @@
                             <td>Division cellulaire et reproduction</td>
                             <td>Sem2</td>
                             <td>3</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
                             <td>Biophysique générale</td>
@@ -51,7 +50,7 @@
                             <td>Équilibres chimiques en solution</td>
                             <td>Sem2</td>
                             <td>2</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
                             <td>Chimie organique : structure et fonctions</td>
@@ -60,75 +59,49 @@
                             <td><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
-                            <td>Initiation au traitement de texte</td>
-                            <td>Sem1</td>
-                            <td>2</td>
-                            <td><div class="loading-circle"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Mathématiques-statistiques</td>
-                            <td>Sem1</td>
-                            <td>3</td>
-                            <td><div class="loading-circle"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Mécanique du point, Radioactivité et Optique</td>
-                            <td>Sem1</td>
-                            <td>3</td>
-                            <td><div class="loading-circle"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Éléments d’électrostatique et d’électrocinétique</td>
-                            <td>Sem1</td>
-                            <td>3</td>
-                            <td><div class="loading-circle"></div></td>
-                        </tr>
-                        <tr>
                             <td>Anatomie : Système squelettique, système articulaire, système musculaire</td>
                             <td>Sem2</td>
                             <td>7</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
                             <td>Biochimie structurale</td>
                             <td>Sem2</td>
                             <td>3</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
                             <td>Biochimie métabolique</td>
                             <td>Sem2</td>
                             <td>3</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
                             <td>Génétique fondamentale et appliquée</td>
                             <td>Sem2</td>
                             <td>4</td>
-                            <td><div class="loading-circle"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Parasitologie-Entomologie</td>
-                            <td>Sem1</td>
-                            <td>4</td>
-                            <td><div class="loading-circle"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Physiologie générale</td>
-                            <td>Sem1</td>
-                            <td>5</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                         <tr>
                             <td>Botanique</td>
                             <td>Sem2</td>
                             <td>4</td>
-                            <td><div class="loading-circle"></div></td>
+                            <td class="sem2-average"><div class="loading-circle"></div></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sem2Cells = document.querySelectorAll(".sem2-average");
+            sem2Cells.forEach((cell, index) => {
+                setTimeout(() => {
+                    cell.innerHTML = "-";
+                }, index * 5000);
+            });
+        });
+    </script>
 </body>
 </html>
