@@ -15,3 +15,18 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         errorNotification.style.display = "block"; // Afficher la notification d'erreur
     }
 });
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let studentId = document.getElementById("studentId").value;
+    let password = document.getElementById("password").value;
+
+    fetch("https://universite-kara-backend.glitch.me/login", { // Remplace par ton URL Glitch
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ studentId, password })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error("Erreur :", error));
+});
