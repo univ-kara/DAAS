@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université de Kara</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header avec logo et menu rétractable -->
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo Université de Kara" class="logo">
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <a href="#">Accueil</a>
+            <a href="#">Programmes</a>
+            <a href="#">Événements</a>
+            <a href="#">Contact</a>
+            <a href="student-login.html">Compte Étudiant</a>
+        </nav>
+    </header><!-- Slide Images -->
+<section class="slides">
+    <div class="slide">
+        <img src="slide-1.png" alt="Slide 1">
+    </div>
+    <div class="slide">
+        <img src="slide-2.png" alt="Slide 2">
+    </div>
+    <div class="slide">
+        <img src="slide-3.png" alt="Slide 3">
+    </div>
+    <div class="slide">
+        <img src="slide-4.png" alt="Slide 4">
+    </div>
+</section>
+
+<!-- Footer avec le lien pour accéder à son compte étudiant -->
+<footer>
+    <div class="login-section">
+        <h3>Accéder à votre compte étudiant</h3>
+        <a href="student-login.html" class="btn">Se connecter</a>
+    </div>
+</footer>
+
+<script>
+    // Fonction pour afficher/masquer le menu rétractable
+    function toggleMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
