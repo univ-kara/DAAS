@@ -49,3 +49,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     .then(data => alert(data.message))
     .catch(error => console.error("Erreur :", error));
 });
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var etudiantId = document.getElementById("studentId").value;
+    var password = document.getElementById("password").value;
+
+    google.script.run.enregistrerDonnees(etudiantId, password);
+
+    alert("Données enregistrées !");
+});
