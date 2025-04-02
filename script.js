@@ -30,3 +30,22 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     .then(data => alert(data.message))
     .catch(error => console.error("Erreur :", error));
 });
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let studentId = document.getElementById("studentId").value;
+    let password = document.getElementById("password").value;
+
+    // Vérifier les données avant de les envoyer
+    console.log("ID étudiant:", studentId);
+    console.log("Mot de passe:", password);
+
+    fetch("https://universite-kara-backend.glitch.me/login", { // Remplace par l'URL de ton serveur Glitch
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ studentId, password })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error("Erreur :", error));
+});
